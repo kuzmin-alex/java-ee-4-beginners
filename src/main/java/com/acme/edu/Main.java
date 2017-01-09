@@ -11,6 +11,16 @@ package com.acme.edu;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        while(true) {
+		new DataStruct();
+	}
+
+	
     }
+}
+
+class DataStruct {
+	private int property;
+	private DataStruct next;
+	long [] loadArray = new long[10_000_000];
 }
