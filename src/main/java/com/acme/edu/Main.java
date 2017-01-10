@@ -27,6 +27,7 @@ public class Main {
         float f = 0.0F;
         double d = 1e4;
         System.out.println(.1 +.2); //IEEE 
+        System.out.println(.1 +.3); //IEEE 
         
         boolean bb = true | false;    
         
