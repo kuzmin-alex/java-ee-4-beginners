@@ -15,8 +15,8 @@ public class Run {
 
         DataLoader dynamicDataLoader = new DataLoader(
                 new DataWriter[]{new DbDataWriter(), new LdapDataWriter()},
-                new CsvDataReader()
-                dfads
+                new CsvDataReader();
+                
         );
 
         dynamicDataLoader.doRead();
