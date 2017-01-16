@@ -1,5 +1,6 @@
 package su.jet.java.edu.loader.interfaces;
 
+import java.util.ArrayList;
 import su.jet.java.edu.loader.UserData;
 
 /**
@@ -8,5 +9,7 @@ import su.jet.java.edu.loader.UserData;
  */
 public interface DataReader {
 
-    UserData read();
+    ArrayList<UserData> users = new ArrayList(); //?????
+
+    ArrayList<UserData> read();
 }

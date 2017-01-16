@@ -1,5 +1,6 @@
 package su.jet.java.edu.loader;
 
+import java.util.ArrayList;
 import su.jet.java.edu.loader.interfaces.DataReader;
 import su.jet.java.edu.loader.interfaces.DataWriter;
 
@@ -18,7 +19,7 @@ public class DataLoader {
     }
 
     public void doRead() {
-        UserData user = this.dataReader.read();
+        ArrayList<UserData> user = this.dataReader.read();
         for (DataWriter dataWriter : dataWriters) {
             dataWriter.write(user);
         }

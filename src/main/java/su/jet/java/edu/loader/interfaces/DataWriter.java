@@ -1,12 +1,14 @@
 package su.jet.java.edu.loader.interfaces;
 
+import java.util.ArrayList;
 import su.jet.java.edu.loader.UserData;
 
 /**
  *
  * @author Nevsky <me@nevsky.cc>
  */
-public abstract class DataWriter {
-    public abstract void write(UserData userData);
+public interface DataWriter {
+
+    public void write(ArrayList<UserData> userData);
 
 }
