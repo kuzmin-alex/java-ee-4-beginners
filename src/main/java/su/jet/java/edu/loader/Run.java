@@ -17,7 +17,6 @@ public class Run {
                 new DataWriter[]{new DbDataWriter(), new LdapDataWriter()},
                 new CsvDataReader()
         );
-        gfdg
 
         dynamicDataLoader.doRead();
 
