@@ -2,7 +2,7 @@ package demo;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public class Logger {
 

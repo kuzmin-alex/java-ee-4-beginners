@@ -2,7 +2,7 @@ package com.acme.edu;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public class DataLoader {
 

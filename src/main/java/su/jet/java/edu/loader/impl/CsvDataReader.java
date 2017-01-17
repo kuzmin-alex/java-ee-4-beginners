@@ -5,7 +5,7 @@ import su.jet.java.edu.loader.UserData;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public class CsvDataReader implements DataReader {
 

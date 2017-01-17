@@ -5,7 +5,7 @@ import su.jet.java.edu.loader.interfaces.DataWriter;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public class DataLoader {
 

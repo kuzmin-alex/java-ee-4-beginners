@@ -4,7 +4,7 @@ import su.jet.java.edu.loader.UserData;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public abstract class DataWriter {
     public abstract void write(UserData userData);

@@ -7,10 +7,10 @@ import su.jet.java.edu.loader.impl.LdapDataWriter;
 
 /**
  *
- * @author Nevsky <me@nevsky.cc>
+ * @author aleksandr-nevsky
  */
 public class Run {
-
+    
     public static void main(String[] args) {
 
         DataLoader dynamicDataLoader = new DataLoader(
