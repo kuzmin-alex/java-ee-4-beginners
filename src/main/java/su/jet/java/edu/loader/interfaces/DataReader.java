@@ -8,5 +8,5 @@ import su.jet.java.edu.loader.UserData;
  */
 public interface DataReader {
 
-    UserData read();
+    UserData[] read();
 }
