@@ -14,4 +14,9 @@ public class XmlDataReader implements DataReader {
         return new UserData[] {new UserData(2, "Vasya xml")};
     }
 
+    @Override
+    public void close() {
+        System.out.println("Close XML file");
+    }
+
 }

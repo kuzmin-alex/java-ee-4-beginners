@@ -9,4 +9,5 @@ import su.jet.java.edu.loader.dataclasses.UserData;
 public interface DataReader {
 
     UserData[] read();
+    public void close();
 }

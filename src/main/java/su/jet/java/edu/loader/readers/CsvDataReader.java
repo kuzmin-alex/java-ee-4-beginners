@@ -46,7 +46,12 @@ public class CsvDataReader implements DataReader {
         }
     }
 
-    private void closeBufferReaderConnection() {
+    @Override
+    public void close() {
+        closeBufferReaderConnection();
+    }
+    
+    private  void closeBufferReaderConnection() {
         try {
             if (bufferedReader != null) {
                 bufferedReader.close();
@@ -54,7 +59,7 @@ public class CsvDataReader implements DataReader {
                 System.out.println("CSV bufferedReader already closed");
             }
         } catch (IOException ex) {
-
+            System.out.println(ex);
         }
     }
 

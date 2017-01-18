@@ -23,6 +23,7 @@ public class DataLoader {
                 writeUserDataToDataWriters(user);
             }
         }
+        this.dataReader.close();
     }
 
     private void writeUserDataToDataWriters(UserData user) {
