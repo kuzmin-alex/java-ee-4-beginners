@@ -1,6 +1,6 @@
-package su.jet.java.edu.loader.interfaces;
+package su.jet.java.edu.loader.core;
 
-import su.jet.java.edu.loader.UserData;
+import su.jet.java.edu.loader.dataclasses.UserData;
 
 /**
  *

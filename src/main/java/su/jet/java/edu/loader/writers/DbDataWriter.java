@@ -1,7 +1,7 @@
-package su.jet.java.edu.loader.impl;
+package su.jet.java.edu.loader.writers;
 
-import su.jet.java.edu.loader.interfaces.DataWriter;
-import su.jet.java.edu.loader.UserData;
+import su.jet.java.edu.loader.core.DataWriter;
+import su.jet.java.edu.loader.dataclasses.UserData;
 
 /**
  *

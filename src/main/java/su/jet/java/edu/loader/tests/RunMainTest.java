@@ -1,15 +1,16 @@
-package su.jet.java.edu.loader;
+package su.jet.java.edu.loader.tests;
 
-import su.jet.java.edu.loader.interfaces.DataWriter;
-import su.jet.java.edu.loader.impl.CsvDataReader;
-import su.jet.java.edu.loader.impl.DbDataWriter;
-import su.jet.java.edu.loader.impl.LdapDataWriter;
+import su.jet.java.edu.loader.core.DataWriter;
+import su.jet.java.edu.loader.core.DataLoader;
+import su.jet.java.edu.loader.readers.CsvDataReader;
+import su.jet.java.edu.loader.writers.DbDataWriter;
+import su.jet.java.edu.loader.writers.LdapDataWriter;
 
 /**
  *
  * @author aleksandr-nevsky
  */
-public class Run {
+public class RunMainTest {
     
     public static void main(String[] args) {
 

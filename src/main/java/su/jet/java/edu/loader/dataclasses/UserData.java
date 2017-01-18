@@ -1,4 +1,4 @@
-package su.jet.java.edu.loader;
+package su.jet.java.edu.loader.dataclasses;
 
 /**
  *
