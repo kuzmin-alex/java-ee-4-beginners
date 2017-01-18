@@ -14,9 +14,9 @@ public class Test {
 
         DataLoader dynamicDataLoader = new DataLoader(
                 new DataWriter[]{new TestDbDataWriter(), new TestLdapDataWriter()},
-                new CsvDataReader(2, "C:\\NetBeansProjects\\java-ee-4-beginners\\data.csv")
+                new CsvDataReader(6, "C:\\NetBeansProjects\\java-ee-4-beginners\\data.csv")
         );
-        dynamicDataLoader.doRead();
+        dynamicDataLoader.load();
 
     }
 

@@ -17,9 +17,6 @@ public class CsvDataReader implements DataReader {
     private final int batchSize;
     private final String filePath;
 
-//    public CsvDataReader() {
-//    this(1);
-//     }
     public CsvDataReader(int batchSize, String filePath) {
         this.batchSize = batchSize;
         this.filePath = filePath;
@@ -40,6 +37,7 @@ public class CsvDataReader implements DataReader {
 
     @Override
     public UserData[] read() {
+
         if (bufferedReader == null) {
             connectToBufferedReader();
         }
@@ -47,15 +45,12 @@ public class CsvDataReader implements DataReader {
         UserData[] users = new UserData[batchSize];
         for (int counter = 0; counter < batchSize; counter++) {
             UserData user;
-
             if ((user = getUserDataInstance()) != null) {
                 users[counter] = user;
             }
 
         }
-
         return users;
-        // return (users.length != 0) ? users : null;
     }
 
     private UserData getUserDataInstance() {

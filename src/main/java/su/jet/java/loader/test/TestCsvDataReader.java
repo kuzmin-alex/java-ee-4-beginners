@@ -1,7 +1,6 @@
 package su.jet.java.loader.test;
 
 import su.jet.java.edu.loader.reader.*;
-import java.util.ArrayList;
 import su.jet.java.edu.loader.controller.UserData;
 
 /**

@@ -17,14 +17,16 @@ public class DataLoader {
         this.dataWriters = dataWriters;
     }
 
-    public void doRead() {
+    public void load() {
         UserData[] users;
         while ((users = this.dataReader.read())[0] != null) {
-            System.out.println("while");
             for (UserData user : users) {
-                System.out.println("for");
-                for (DataWriter dataWriter : dataWriters) {
-                    dataWriter.write(user);
+                if (user != null) {
+                    for (DataWriter dataWriter : dataWriters) {
+
+                        dataWriter.write(user);
+
+                    }
                 }
             }
         }
