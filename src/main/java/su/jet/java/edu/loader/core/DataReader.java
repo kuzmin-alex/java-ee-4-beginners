@@ -1,5 +1,7 @@
 package su.jet.java.edu.loader.core;
 
+import java.io.IOException;
+import java.util.Set;
 import su.jet.java.edu.loader.dataclasses.UserData;
 
 /**
@@ -8,6 +10,6 @@ import su.jet.java.edu.loader.dataclasses.UserData;
  */
 public interface DataReader {
 
-    UserData[] read();
+    Set<UserData> read() throws IOException;
     public void close();
 }

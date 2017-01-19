@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 import su.jet.java.edu.loader.core.DataReader;
 import su.jet.java.edu.loader.dataclasses.UserData;
 
@@ -34,15 +36,14 @@ public class CsvDataReader implements DataReader {
         this.file = csvFile;
     }
 
-    private void openConnectToBufferedReader() {
+    private void openConnectToBufferedReader() throws IOException {
         try {
             bufferedReader = new BufferedReader(
                     new InputStreamReader(
                             new BufferedInputStream(
                                     new FileInputStream(file))));
         } catch (FileNotFoundException e) {
-            System.out.println(e);
-            throw new RuntimeException("CSV file is missing", e);
+            throw new IOException("CSV file is missing", e);
         }
     }
 
@@ -50,8 +51,8 @@ public class CsvDataReader implements DataReader {
     public void close() {
         closeBufferReaderConnection();
     }
-    
-    private  void closeBufferReaderConnection() {
+
+    private void closeBufferReaderConnection() {
         try {
             if (bufferedReader != null) {
                 bufferedReader.close();
@@ -64,24 +65,29 @@ public class CsvDataReader implements DataReader {
     }
 
     /**
-     * Открывает BufferedReader. Нужно закрывать методом closeBufferReaderConnection().
+     * Открывает BufferedReader. Нужно закрывать методом
+     * closeBufferReaderConnection().
+     *
      * @return userDatas
+     * @throws java.io.IOException
      */
     @Override
-    public UserData[] read() {
+    public Set<UserData> read() throws IOException {
         if (bufferedReader == null) {
             openConnectToBufferedReader();
         }
-        UserData[] userDatas = new UserData[batchSize];
+        Set<UserData> userDatas = new HashSet<>();
+
         for (int counter = 0; counter < batchSize; counter++) {
             UserData ud;
 
             if ((ud = getUserDataInstance()) != null) {
-                userDatas[counter] = ud;
+                userDatas.add(ud);
             }
 
         }
-        return (userDatas.length != 0) ? userDatas : null;
+        return (userDatas.isEmpty()) ? null  : userDatas;
+
     }
 
     private UserData getUserDataInstance() {
@@ -90,6 +96,10 @@ public class CsvDataReader implements DataReader {
             UserData userData;
             if ((currentLine = bufferedReader.readLine()) != null) {
                 String[] rowData = currentLine.split(",");
+                if (rowData.length != 2) {
+                    System.out.println("Bad data in line");
+                    return null;
+                }
                 userData = new UserData(Integer.parseInt(rowData[0]), rowData[1]);
                 return userData;
             }

@@ -1,5 +1,7 @@
 package su.jet.java.edu.loader.core;
 
+import java.io.IOException;
+import java.util.Set;
 import su.jet.java.edu.loader.dataclasses.UserData;
 
 /**
@@ -17,13 +19,17 @@ public class DataLoader {
     }
 
     public void doRead() {
-        UserData[] users;
-        while ((users = this.dataReader.read())[0] != null) {
-            for (UserData user : users) {
-                writeUserDataToDataWriters(user);
+        try {
+            Set<UserData> users;
+            while ((users = this.dataReader.read()) != null) {
+                for (UserData user : users) {
+                    writeUserDataToDataWriters(user);
+                }
             }
+            this.dataReader.close();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage() + " " + ex.getCause());
         }
-        this.dataReader.close();
     }
 
     private void writeUserDataToDataWriters(UserData user) {
@@ -34,6 +40,5 @@ public class DataLoader {
                 System.out.println("users[counter] is null");
             }
         }
-
     }
 }
