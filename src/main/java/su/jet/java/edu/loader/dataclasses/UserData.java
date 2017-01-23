@@ -1,10 +1,12 @@
 package su.jet.java.edu.loader.dataclasses;
 
+import java.io.Serializable;
+
 /**
  *
  * @author aleksandr-nevsky
  */
-public class UserData {
+public class UserData implements Serializable {
 
     private int id;
     private String name;

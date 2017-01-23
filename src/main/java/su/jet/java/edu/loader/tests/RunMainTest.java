@@ -20,7 +20,7 @@ public class RunMainTest {
         );
 
         dynamicDataLoader.doRead();
-        dynamicDataLoader.doRead();
+//        dynamicDataLoader.doRead();
     }
 
 }
