@@ -1,5 +1,6 @@
 package su.jet.java.edu.loader.readers;
 
+import java.util.Set;
 import su.jet.java.edu.loader.core.DataReader;
 import su.jet.java.edu.loader.dataclasses.UserData;
 
@@ -10,8 +11,8 @@ import su.jet.java.edu.loader.dataclasses.UserData;
 public class XmlDataReader implements DataReader {
 
     @Override
-    public UserData[] read() {
-        return new UserData[] {new UserData(2, "Vasya xml")};
+    public Set<UserData> read() {
+        return null;
     }
 
     @Override

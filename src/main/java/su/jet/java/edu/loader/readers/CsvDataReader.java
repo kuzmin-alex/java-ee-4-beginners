@@ -56,6 +56,7 @@ public class CsvDataReader implements DataReader {
         try {
             if (bufferedReader != null) {
                 bufferedReader.close();
+                bufferedReader = null;
             } else {
                 System.out.println("CSV bufferedReader already closed");
             }
