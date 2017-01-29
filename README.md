@@ -202,12 +202,11 @@
 - Способы разбора документа 
 - https://docs.oracle.com/cd/B28359_01/appdev.111/b28394/adx_j_parser.htm#ADXDK19108
 - XSLT
-- https://docs.oracle.com/javase/tutorial/jaxp/stax/why.html
 
 ### JAXP
 - DOM https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/
 - SAX https://www.mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/
-- StAX 
+- StAX http://tutorials.jenkov.com/java-xml/sax-vs-stax.html https://docs.oracle.com/javase/tutorial/jaxp/stax/why.html
 
 ### JAXB
 - overview/marshaling/unmarshalling
