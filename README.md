@@ -222,12 +222,13 @@
 - web.xml
 
 ### Проектирование JSF web приложений
-- Структура
+- Структура (PageFlow)
 - Макет страниц
 
 ### Библиотеки компонентов
 - Базовые компоненты
 - Валидаторы
+- http://www.journaldev.com/7035/jsf-validation-example-tutorial-validator-tag-custom-validator, https://www.tutorialspoint.com/jsf/jsf_validation_tags.htm, http://incepttechnologies.blogspot.ru/p/validation-in-jsf.html
 
 ### Обработка событий в JSF web приложениях
 
